@@ -10,13 +10,13 @@
 	width:300px;
 }
 
-.appLayout2{
+.search{
 	display: flex;
 	justify-content: left;
 	flex-direction: row;
 }
 
-.appLayout2 img{
+.search img{
 	width:200px;
 	padding: 5px 0 0 10px;
 	margin-right:30px;

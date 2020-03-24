@@ -27,11 +27,7 @@ export default class AutoCompleteText extends React.Component{
 		let suggestions = [];
 		if (e.key === 'Enter') {
 			if(value.length > 0) {
-				//	console.log(this.props.cowList);
 				suggestions = this.props.cowList.sort().filter(h => h.name.toLowerCase().includes(value.toLowerCase()));
-				console.log(suggestions);
-				//alert(value);
-
 				this.setState(() => ({suggestions, text: value}));
 				this.setState(() => ({
 					text: value.name,
@@ -40,8 +36,6 @@ export default class AutoCompleteText extends React.Component{
 				this.props.triggerParentUpdate(suggestions,value.name);
 			}
 		}
-
-
 	};
 
 	suggestionSelected(value){

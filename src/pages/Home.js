@@ -23,6 +23,8 @@ export default class Home extends Component{
 
 	render() {
 		if(this.state.changePage){
+			//alert(this.state.searchName);
+
 			let encode =btoa(this.state.searchName);
 			let search ="/search/"+encode;
 			return (

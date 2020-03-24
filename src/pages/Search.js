@@ -15,24 +15,25 @@ export default class Search extends Component{
 			showLines: false,
 			cowListFiltered:[
 				{
-					name:'bottom',
+					name:'',
 					description:'',
 					region:'',
 					image:''
 				}
 			]
 		};
+
+
 	}
-	
+
 	componentDidMount() {
+	//	alert(this.state.search);
 		let suggestions = [];
 		if(this.state.search.length > 0) {
 			suggestions = cowList.sort().filter(h => h.name.toLowerCase().includes(this.state.search.toLowerCase()));
 			this.listItems(suggestions,this.state.search);
 		}
-
 	}
-
 
 	listItems = (cowListFiltered,searchName) =>{
 		this.setState({
@@ -46,7 +47,6 @@ export default class Search extends Component{
 		);
 	}
 
-
 	render() {
 		return (
 			<div>
@@ -55,9 +55,8 @@ export default class Search extends Component{
 						<img src={logo} alt="Moogle" />
 					</div>
 					<div className="App-Component">
-						<AutoCompleteText value='test'  cowList={cowList} triggerParentUpdate={this.listItems} />
+						<AutoCompleteText startValue={this.state.search}  cowList={cowList} triggerParentUpdate={this.listItems} />
 					</div>
-
 				</div>
 				<div className="App-Response">
 					<ul>

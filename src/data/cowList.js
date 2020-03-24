@@ -1596,7 +1596,7 @@ export default [
 			'<br/>' +
 			'The World Hereford Council[8] is based in the United Kingdom. There are currently 20 Hereford societies in 17 member countries, and a further eight societies in 10 nonmember countries.[9] In the United States, the official Hereford organization and breed registry is the American Hereford Association. It is the second-largest society of its kind in the country.',
 		region: 'England',
-		image: 'hereford_bul.jpg',
+		image: 'hereford_bull.jpg',
 	},
 	{
 		name: 'Herens',

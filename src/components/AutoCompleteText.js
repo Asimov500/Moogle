@@ -1,10 +1,10 @@
 import React from 'react';
 import './AutoCompleteText.css';
+import cowList from "../data/cowList";
 
 export default class AutoCompleteText extends React.Component{
 	constructor(props){
 		super(props);
-
 		this.state={
 			suggestions:[],
 			text:'',
@@ -16,7 +16,6 @@ export default class AutoCompleteText extends React.Component{
 		const value = e.target.value;
 		let suggestions = [];
 		if(value.length > 0){
-		//	const regex = new RegExp(`^${value}`,'i');
 			suggestions = this.props.cowList.sort().filter(h => h.name.toLowerCase().includes(value.toLowerCase()));
 		}
 		this.setState(() => ({ suggestions, text: value }));
@@ -33,7 +32,7 @@ export default class AutoCompleteText extends React.Component{
 					text: value.name,
 					suggestions: []
 				}));
-				this.props.triggerParentUpdate(suggestions,value.name);
+				this.props.triggerParentUpdate(suggestions,this.state.text);
 			}
 		}
 	};
@@ -60,8 +59,14 @@ export default class AutoCompleteText extends React.Component{
 		);
 	}
 
+	componentDidMount() {
+		this.setState({
+			text: this.props.startValue
+		});
+	}
+
 	render() {
-		const { text } = this.state;
+		let { text } = this.state;
 		return (
 			<div className="AutoCompleteText">
 				<input value={text} onChange={this.onTextChanged} onKeyDown={this.OnEnterKey} type="text" />

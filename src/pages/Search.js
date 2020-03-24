@@ -22,12 +22,9 @@ export default class Search extends Component{
 				}
 			]
 		};
-
-
 	}
 
 	componentDidMount() {
-	//	alert(this.state.search);
 		let suggestions = [];
 		if(this.state.search.length > 0) {
 			suggestions = cowList.sort().filter(h => h.name.toLowerCase().includes(this.state.search.toLowerCase()));
@@ -61,22 +58,20 @@ export default class Search extends Component{
 				<div className="App-Response">
 					<ul>
 						{this.state.cowListFiltered.map((item =>
-								<li>
-									<div className="bodText">
-										<h3>{item.name}</h3>
-										{ item.description.length > 0 ? <div dangerouslySetInnerHTML={{__html: item.description }} /> : <div>No Description Available</div> }<br/>
-										<h5>Country/Region of origin:</h5> {item.region}
-									</div>
-									<div className="imDiv">
-										{ item.image.length > 0 ? this.imgShow(item.image) : null }
-									</div>
-								</li>
+							<li key={item.name}>
+								<div className="bodText">
+									<h3>{item.name}</h3>
+									{ item.description.length > 0 ? <div dangerouslySetInnerHTML={{__html: item.description }} /> : <div>No Description Available</div> }<br/>
+									<h5 className="tagFive">Country/Region of origin:</h5>{item.region}
+								</div>
+								<div className="imDiv">
+									{ item.image.length > 0 ? this.imgShow(item.image) : null }
+								</div>
+							</li>
 						))}
 					</ul>
 				</div>
 			</div>
 		);
 	};
-
-
 }

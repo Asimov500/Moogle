@@ -1,6 +1,5 @@
 import React from 'react';
 import './AutoCompleteText.css';
-import cowList from "../data/cowList";
 
 export default class AutoCompleteText extends React.Component{
 	constructor(props){
@@ -54,15 +53,17 @@ export default class AutoCompleteText extends React.Component{
 		}
 		return (
 			<ul>
-				{suggestions.map((item => <li onClick={() => this.suggestionSelected(item)}>{item.name}</li>))}
+				{suggestions.map((item => <li onClick={() => this.suggestionSelected(item)} key={item.name}>{item.name}</li>))}
 			</ul>
 		);
 	}
 
 	componentDidMount() {
-		this.setState({
-			text: this.props.startValue
-		});
+		if( this.props.startValue){
+			this.setState({
+				text: this.props.startValue
+			});
+		}
 	}
 
 	render() {

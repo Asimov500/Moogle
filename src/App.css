@@ -22,6 +22,11 @@
 	margin-right:30px;
 }
 
+.tagFive{
+	padding: 0;
+	margin: 0;
+}
+
 .App-Component{
 	width: 600px;
 	height:30px;
@@ -60,6 +65,5 @@
 }
 
 .App-Response ul li img{
-
 	max-height:200px;
 }

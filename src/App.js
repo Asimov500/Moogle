@@ -6,10 +6,6 @@ import About from './pages/About'
 import {BrowserRouter as Router,Switch, Route} from 'react-router-dom';
 
 class App extends Component{
-	constructor(props){
-		super(props);
-	};
-
 	render(){
 		return(
 			<Router>

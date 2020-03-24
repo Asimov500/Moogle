@@ -8,29 +8,27 @@ import {Redirect} from 'react-router-dom';
 export default class Home extends Component{
 	constructor(props){
 		super(props);
+		this.state={
+			changePage: false,
+			searchName:''
+		};
 	}
 
-	gotoSearch = (cowListFiltered) =>{
-
-		alert('Search Page');
-		/*
+	gotoSearch = (cowListFiltered,searchName) =>{
 		this.setState({
-			layout:'appLayout2',
-			showLines:true,
-			cowListFiltered: cowListFiltered
-		});*/
+			changePage:true,
+			searchName:searchName
+		});
 	};
 
-
 	render() {
-
-/*
-	 return (
-		<Redirect push to="/search" />
-	 );
-*/
-
-
+		if(this.state.changePage){
+			let encode =btoa(this.state.searchName);
+			let search ="/search/"+encode;
+			return (
+				<Redirect push to={search} />
+			 );
+		}
 
 		return (
 			<div className="home">

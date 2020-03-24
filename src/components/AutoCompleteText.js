@@ -37,8 +37,7 @@ export default class AutoCompleteText extends React.Component{
 					text: value.name,
 					suggestions: []
 				}));
-
-				this.props.triggerParentUpdate(suggestions);
+				this.props.triggerParentUpdate(suggestions,value.name);
 			}
 		}
 
@@ -52,7 +51,7 @@ export default class AutoCompleteText extends React.Component{
 		}));
 		let arrayConvert =[];
 		arrayConvert.push(value);
-		this.props.triggerParentUpdate(arrayConvert);
+		this.props.triggerParentUpdate(arrayConvert,value.name);
 	}
 
 	renderSuggstions () {

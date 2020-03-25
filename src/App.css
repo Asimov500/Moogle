@@ -67,3 +67,66 @@
 .App-Response ul li img{
 	max-height:200px;
 }
+
+
+
+
+@media only screen and (max-width: 1500px), (max-device-width: 1500px)
+{
+	.App-Response ul{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+}
+
+@media only screen and (max-width: 1000px), (max-device-width: 1000px)
+{
+	.App-Component{
+		width: 450px;
+	}
+
+}
+
+@media only screen and (max-width: 900px), (max-device-width: 900px)
+{
+	.App-Response ul li img{
+		max-height:150px;
+	}
+	.App-Response ul{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.App-Component{
+		width: 350px;
+		height:50px;
+	}
+}
+
+@media only screen and (max-width: 600px), (max-device-width: 600px)
+{
+	.App-Response ul li img{
+		max-height:100px;
+	}
+	.App-Response ul{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.App-Component{
+		width: 400px;
+		height:50px;
+		padding-top:0;
+	}
+	.search{
+		flex-direction: column;
+		align-items: center;
+	}
+	.search img{
+		width:200px;
+		padding: 5px 0 0 10px;
+	}
+}
+
+
+
+
+

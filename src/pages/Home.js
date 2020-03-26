@@ -3,7 +3,7 @@ import logo from '../images/moogle.svg';
 import AutoCompleteText from "../components/AutoCompleteText";
 import cowList from '../data/cowList'
 import '../App.css';
-import {Redirect} from 'react-router-dom';
+import {Redirect,Link} from 'react-router-dom';
 
 export default class Home extends Component{
 	constructor(props){
@@ -23,15 +23,12 @@ export default class Home extends Component{
 
 	render() {
 		if(this.state.changePage){
-			//alert(this.state.searchName);
-
 			let encode =btoa(this.state.searchName);
 			let search ="/search/"+encode;
 			return (
 				<Redirect push to={search} />
 			 );
 		}
-
 		return (
 			<div className="home">
 				<div>
@@ -39,6 +36,10 @@ export default class Home extends Component{
 				</div>
 				<div className="App-Component">
 					<AutoCompleteText  cowList={cowList} triggerParentUpdate={this.gotoSearch} />
+				</div>
+				<div className="cowSearch">The number one cow search engine</div>
+				<div>
+					<Link className="aboutLink" to="/about">About Moogle</Link>
 				</div>
 
 			</div>

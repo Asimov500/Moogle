@@ -1,20 +1,9 @@
 import React,{Component} from 'react';
 import logo from "../images/moogle.svg";
-import brad from "../images/brad.jpg";
-import AutoCompleteText from "../components/AutoCompleteText";
-import cowList from "../data/cowList";
-//import './AutoCompleteText.css';
-
-
-
-const imgStyle = {
-	//width:700
-};
+import cattle from "../images/cattle.jpg";
+import {Link} from 'react-router-dom';
 
 export default class About extends Component{
-	/*constructor(props){
-		super(props);
-	}*/
 	render() {
 		return (
 			<div>
@@ -22,23 +11,25 @@ export default class About extends Component{
 				<div>
 					<img src={logo} alt="Moogle" />
 				</div>
-				<div className="App-Component">
-					hello
-				</div>
+
 			</div>
 			<div className="App-Response">
 				<ul>
 					<li>
-						<div className="bodText">
+						<div>
 							<h3>About</h3>
 							<div>
-								<div className="imfloat"><img  src={brad} alt="Moogle" /></div>
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
+								<div className="imfloat"><img  src={cattle} alt="Moogle" /></div>
+								This is a small web app created to show the possibilities of react. In the app I have not used any SCSS (just standard CSS), or backend api, because I wanted to learn the basics of creating an app in react only, at this moment in time. Even though this is a small app, it shows that I have mastered the rudimentary fundamentals of react, routing and JSX.
+								<br/><br/>
+								At first I didn't like that fact that react was mixing html and javascript, as I have always learned that there should be a separation concerns. React challenges the traditional models of thinking towards the separation of concern. After a while it felt quite refreshing to try a new way. I do understand as sometimes with angularJs you were alway trying to trace back the code from the html template, back to the controller, but this is not necessary with react.
+								<br/><br/>
+								This app is fully responsive and mobile compliant.
+								<br/><br/><br/>
+								<Link className="aboutLink" to="/">Back to search</Link>
 							</div>
 						</div>
 						<div className="imDiv">
-
 						</div>
 					</li>
 				</ul>

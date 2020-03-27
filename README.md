@@ -3,6 +3,7 @@
  
  This is a small web app created to show the possibilities of react. Even though this is a small app, it shows that I have mastered the rudimentary fundamentals of react, routing and JSX.
  You can see a live version of this app at http://moogle.asimoventerprises.co.uk
+ 
  The Moogle logo is an SVG designed in illustrator. I tend to design all my logos in illustrator, and I try when possible to use SVGs on a webpage, as they load quick, small in size, and can be scalable to any dimensions.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

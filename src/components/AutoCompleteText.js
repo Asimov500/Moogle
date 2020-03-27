@@ -77,6 +77,4 @@ export default class AutoCompleteText extends React.Component{
 			</div>
 		);
 	};
-
-
 }

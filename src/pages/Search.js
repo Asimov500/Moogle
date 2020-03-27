@@ -36,6 +36,7 @@ export default class Search extends Component{
 		this.setState({
 			cowListFiltered: cowListFiltered
 		});
+		this.props.history.replace(`/search/`+btoa(searchName));
 	};
 
 	imgShow(im){

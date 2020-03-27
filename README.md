@@ -1,3 +1,9 @@
+# Moogle
+ A cow search engine.
+ 
+ This is a small web app created to show the possibilities of react. Even though this is a small app, it shows that I have mastered the rudimentary fundamentals of react, routing and JSX.
+ You can see a live version of this app at http://moogle.asimoventerprises.co.uk
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

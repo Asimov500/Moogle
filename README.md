@@ -1,12 +1,12 @@
 # Moogle
  A cow search engine.
- 
+
  This is a small web app created to show the possibilities of react. Even though this is a small app, it shows that I have mastered the rudimentary fundamentals of react, routing and JSX.
  You can see a live version of this app at http://moogle.asimoventerprises.co.uk
- 
+
  The Moogle logo is an SVG designed in illustrator. I tend to design all my logos in illustrator. I try when possible to use SVGs on a webpage, as they load quick, they are small in size, and can be scalable to any dimensions.
- 
- The app is also reponsive and can scale to any size for mobile phones, or tablets.
+
+ The app is also responsive and can scale to any size for mobile phones, or tablets.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
